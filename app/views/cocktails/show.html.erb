@@ -4,5 +4,5 @@
     <li><%= dose.ingredient.name %>: <%= dose.description %> <%= link_to "Supprimer", dose_path(dose), method: "delete" %></li>
   <% end %>
 </ul>
-<%= link_to "Ajouter une dose", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Retour aux cocktails", cocktails_path %>
+<%= link_to "Ajouter une dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+<%= link_to "Retour aux cocktails" , cocktails_path, class: 'btn btn-primary' %>

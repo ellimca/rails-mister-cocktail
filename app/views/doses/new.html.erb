@@ -3,5 +3,6 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
-  <%= f.submit "Ajouter une dose"%>
+  <%= f.submit "Ajouter une dose", class: 'btn btn-primary'%>
+  <%= link_to "Retour aux cocktails" , cocktails_path, class: 'btn btn-primary' %>
 <% end %>
