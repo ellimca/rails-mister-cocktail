@@ -5,8 +5,7 @@
       <%= simple_form_for @cocktail do |f| %>
         <%= f.input :name %>
         <%= f.submit class: 'btn btn-primary' %>
+        <%= link_to "Retour aux cocktails" , cocktails_path, class: 'btn btn-primary' %>
       <% end %>
     </div>
-  </div>
-       <%= link_to "Retour aux cocktails" , cocktails_path, class: 'btn btn-primary' %>
 </div>
