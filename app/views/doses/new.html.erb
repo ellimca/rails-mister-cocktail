@@ -1,4 +1,4 @@
-<h1>Ajoutez une dose à votre recette <%= @cocktail.name %></h1>
+<h1 class="mt-4">Ajoutez une dose à votre recette <%= @cocktail.name %></h1>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
