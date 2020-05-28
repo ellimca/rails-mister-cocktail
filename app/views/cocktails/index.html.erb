@@ -1,11 +1,12 @@
 <h1 class="text-center" >&#127865; Happy Cocktails &#127865;</h1>
 <div class="container">
   <ul class="list-group list-unstyled">
-    <%= cl_image_tag("libre_2_wqofor",
-      width: 400, height: 300, crop: :fill) %>
     <% @cocktails.each do |cocktail| %>
       <li class="list-group-item bg-transparent py-1">
         <%= link_to cocktail.name, cocktail_path(cocktail), class: "text-info" %>
+        <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <%end%>
       </li>
     <% end %>
   </ul>
