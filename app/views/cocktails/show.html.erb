@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="mt-4">Votre recette <%= @cocktail.name %></h1>
+  <h1 class="mt-4"> Votre recette <%= @cocktail.name %></h1>
   <ul class='list-instyled'>
     <% @cocktail.doses.each do |dose| %>
       <li>
@@ -9,7 +9,9 @@
     <% end %>
   </ul>
   <%= link_to "Ajouter une dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-  <%= link_to "Supprimer Cocktails", cocktail_path(@cocktail), method: :delete, class: 'btn btn-primary' %>
+  <div class="alert alert-warning" role="alert">
+  Dans la vie, ma chérie, on n'arrive à rien sans relations, et il n'y a rien de plus commode que les cocktails pour se faire des relations
+  <%= link_to "Supprimer Cocktails", cocktail_path(@cocktail), method: :delete, class: 'btn btn-danger ' %>
+  </div>
   <%= link_to "Retour aux Cocktails" , root_path, class: 'btn btn-primary' %>
-
 </div>

@@ -1,9 +1,9 @@
 <div class="container w-50">
-  <h1 class="text-center">Créer un nouveau cocktail</h1>
+  <h1 class="text-center"> &#x1f378; Créer un nouveau cocktail &#x1f378; </h1>
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :photo, as: :file %>
     <%= f.input :name %>
-    <%= f.submit class: 'btn btn-primary' %>
-    <%= link_to "Retour aux cocktails" , root_path, class: 'btn btn-primary' %>
+    <%= f.submit class: 'btn btn-success' %>
+    <%= link_to "Retour aux cocktails" , root_path, class: 'btn btn-light' %>
   <% end %>
 </div>
